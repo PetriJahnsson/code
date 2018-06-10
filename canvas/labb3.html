@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="labb3.css" type="text/css" />
+ 
+ <title>Labb3</title>
+</head>
+<body>
+<nav>
+<ul>
+<li><a href="Meikyo72.github.io/index.html">Start</a></li>
+<li><a href="Meikyo72.github.io/ovnpage.html">Övningar FEU16</a></li>
+<li><a href="Meikyo72.github.io/ownprojects.html">Egna Projekt</a></li>
+<li><a href="#">Presentation</a></li>
+<li><a href="#">Kontakt</a></li>
+</ul>
+</nav>
+<div id="mainwrapper">
+<div id="secwrapper">
+<div id="menu">
+<!--<button id="menubutton" type="button" onclick="location.href='#navlist'">Meny</button>-->
+<button id="menubutton" type="button">Meny</button>
+<div id="navi">
+<ul id="navlist">
+	<li id="mencirk"><a href="#">Rita Cirkel</a></li>
+	<li id="menrekt"><a href="#">Rita Rektangel</a></li>
+	<li id="mentria"><a href="#">Rita Triangel</a></li>
+	<li id="menpoly"><a href="#">Rita Polygon</a></li>
+	<li id="menslut"><a href="#">Slutför polygon</a></li>
+	<li class="rensa" id="menrens"><a href="#">Rensa Canvas</a></li>
+	<li id="menexpo"><a href="#">Exportera JSON</a></li>
+</ul>
+</div>
+</div>
+<br>
+<div id="jimp">
+<label for="jotext">Exportera eller Importera JSON</label>
+<br>
+<textarea id="jotext"></textarea>
+<br>
+<button id="impj" type="button">Importera JSON</button>
+</div>
+</div>
+
+<canvas id="can" width="750px" height="500px"><p>Are you for real? Go upgrade your browser like yesterday!</p></canvas>
+
+<div id="knappar">
+<label for="sel">Välj färg eller skriv hex</label>
+<br>
+<select id="sel">
+<option value="inget">Skriv Hex</option>
+<option value="black">Svart</option>
+<option value="blue">Blå</option>
+<option value="green">Grön</option>
+</select>
+<br>
+<label for="farg">Skriv in din färg i Hexform</label>
+<textarea id="farg" rows="1" cols="30"></textarea>
+<br>
+<button id="adcol" type="button">Lägg till din färg i lista</button>
+<br>
+<label for="rafigur">Välj din figur</label>
+<form id="rafigur" action="">
+  <input type="radio" name="figur" value="circle" id="circle"> Circle<br>
+  <input type="radio" name="figur" value="triangle" id="triangle"> Triangle<br>
+  <input type="radio" name="figur" value="rectangle" id="rectangle"> Rectangle<br>
+  <input type="radio" name="figur" value="plygon" id="polygon"> Polygon<br>
+  <input type="radio" name="figur" value="rancircle" id="rancircle"> Random Circles<br>
+  <input type="radio" name="figur" value="rantriangle" id="rantriangle"> Random Triangles<br>
+  <input type="radio" name="figur" value="ranrectangle" id="ranrectangle"> Random Rectangles<br>
+</form>
+<br>
+<button id="rita" type="button">Börja Rita</button>
+<br>
+<button id="avbryt" type="button">Rita Polygon</button>
+<br>
+<button class="rensa" id="rensa" type="button">Rensa Canvas</button>
+<br>
+<label for="statusB">Status</label>
+<div id="statswrap">
+<p id="statusB">Vad ska du göra?</p>
+</div>
+<br>
+<button id="exp" type="button">Exportera bild</button>
+
+<button id="imp" type="button">Importera bild</button>
+</div>
+</div>
+<footer>Petri Jahnsson - FEU16</footer>
+<script src="labb3.js"></script>
+</body>
+</html>

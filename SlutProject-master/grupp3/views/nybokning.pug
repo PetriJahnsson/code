@@ -1,0 +1,54 @@
+head
+  title Nybokning
+  link(rel='stylesheet', href='/stylesheets/bokning.css')
+body
+  div(id="flex2")
+    div
+      input(type="button", value="tillbaka", id="tillbaka", onclick="window.location.href='http://localhost:3000/'")
+  each fordon in fordonlist
+    div(id="flexbox1")
+      div(id="flexboxtext")
+        h1 Fordon
+        div#fordon_list_item
+          form(action="/process_post" method="POST")
+            h3 #{fordon.brand}
+              br
+              label(for="fordonstyp")="Fordonstyp:"
+              input(name="fordonstyp", value=fordon.fordonstyp,)
+              br
+              label(for="korkort")="Körkort: "
+              input(name="korkort", value=fordon.requiredDrivingLicense)
+              br
+              label(for="marke")="Märke: "
+              input(name="marke", value=fordon.brand)
+              br
+              label(for="vaxellada")="Växellåda: "
+              input(name="vaxellada", value=fordon.gearbox)
+              br
+              label(for="modell")="Modell: " 
+              input(name="modell", value=fordon.model)
+              br
+              label(for="arsmodell")="Årsmodell: "
+              input(name="arsmodell",value=fordon.year)
+              br
+              label(for="dagshyra")="Dagshyra: "
+              input(name="dagshyra", value=fordon.dagshyra)
+              br
+              label(for="bokad")="Bokad: "
+              input(name="bokad", value=fordon.bokad, id=fordon._id)
+              label(for="id" id="hidden")="Id"
+              input(name="id", id="hidden", value=fordon._id)
+              if fordon.bokad == "nej"
+                input(type="submit", value="bokning" id="bokning")
+      div(id="flexboximg")
+        img(src=fordon.imgLink alt="No img")
+        div(id="flexbtn")
+
+          
+
+
+    
+     
+
+    
+      

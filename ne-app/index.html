@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NIELSEN Estate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/swipebox.css">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/main.js" type="text/babel"></script>
+<!-- //js -->
+<!-- React -->
+<script src="https://fb.me/react-with-addons-15.1.0.js"></script>
+<script src="https://fb.me/react-dom-15.1.0.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<!-- //React -->
+<!-- web-fonts
+<link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+ //web-fonts -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+  apiKey: "AIzaSyAVzSIkqK7xfhxGgskRpxl3SPjzmyNg1l4",
+  authDomain: "petrichat-f6d40.firebaseapp.com",
+  databaseURL: "https://petrichat-f6d40.firebaseio.com",
+  storageBucket: "petrichat-f6d40.appspot.com",
+  messagingSenderId: "156551107044"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+	<!-- banner -->
+	<div id="home" class="w3ls-banner">
+		<!-- header -->
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<h1><a href="index.html">NIELSEN Estate</a></h1>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!-- //header -->
+		<!-- top-nav -->
+		<nav class="cd-stretchy-nav edit-content">
+			<a class="cd-nav-trigger" href="#0"> Menu <span aria-hidden="true"></span> </a>
+			<ul>
+				<li><a href="#home" class="scroll"><span>Hem</span></a></li>
+				<li><a href="#about" class="scroll"><span>Om Oss</span></a></li>
+				<li><a href="#portfolio" class="scroll"><span>Våra Objekt</span></a></li>
+				<li><a href="#contact" class="scroll"><span>Kontakt</span></a></li>
+			</ul>
+			<span aria-hidden="true" class="stretchy-nav-bg"></span>
+		</nav>
+		<!-- //top-nav -->
+		<!-- banner-text -->
+		<div class="banner-w3ltext">
+			<div class="container">
+				<h3>Dignissimos at vero eos et</h3>
+				<h2>INTEGER GRAVIDA MAURIS NONMI <br>ODIO EFFICITUR.</h2>
+				<a href="#myModal" class="wthree-btn" data-toggle="modal">Ta Reda På Mer</a>
+			</div>
+		</div>
+		<!-- //banner-text -->
+	</div>
+	<!-- //banner -->
+	<!-- banner-bottom -->
+	<div class="serach-w3agile">
+		<div class="container">
+			<div class="place-grids">
+				<form action="#" method="post">
+					<div class="col-md-2 col-xs-4 place-grid">
+						<h5>Välj Stad/Ort</h5>
+						<select class="sel">
+							<option value="">Alla</option>
+							<option value="">Alicante</option>
+							<option value="">Madrid</option>
+							<option value="">Torrevieja</option>
+							<option value="">Barcelona</option>
+							<option value="">Benidorm</option>
+						</select>
+					</div>
+          <div class="col-md-2 col-xs-4 place-grid">
+						<h5>Välj Zon</h5>
+						<select class="sel">
+							<option value="">Alla</option>
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+						</select>
+          </div>
+					<div class="col-md-2 col-xs-4 place-grid">
+						<h5>Pris min</h5>
+						<select class="sel">
+							<option value="">Alla</option>
+							<option value="">€50,000</option>
+							<option value="">€75,000</option>
+							<option value="">€100,000</option>
+							<option value="">€150,000</option>
+							<option value="">€500,000</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-xs-4 place-grid">
+						<h5>Pris max</h5>
+						<select class="sel">
+							<option value="">Alla</option>
+							<option value="">€50,000</option>
+							<option value="">€75,000</option>
+							<option value="">€100,000</option>
+							<option value="">€150,000</option>
+							<option value="">€1,000,000</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-xs-4 place-grid">
+						<h5>Sovrum</h5>
+						<select class="sel">
+							<option value="">Alla</option>
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-xs-4 place-grid">
+						<input type="submit" value="Sök">
+					</div>
+					<div class="clearfix"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //banner-bottom -->
+	<!-- portfolio -->
+	<div id="portfolio" class="services portfolio">
+		<div class="container">
+			<h3 class="w3title">Våra Objekt</h3>
+			<p class="wthree-ttext">Vel illum qui dolorem eum aliquid ex ea commodi consequatur
+				vel illum qui dolorem eum fugiat quo voluptas</p>
+			<div class="gallery_gds">
+				<ul class="simplefilter">
+					<li class="active" data-filter="all">Alla</li>
+					<li data-filter="1">Lägenhet</li>
+					<li data-filter="2">Hus/Villa</li>
+					<li data-filter="3">Övrigt</li>
+				</ul>
+				<div class="filtr-container" id="estatelist">
+          <!--
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Busy streets">
+						<div class="agileits-img">
+							<a href="images/g1.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+								<img class="img-responsive " src="images/g1.jpg" alt=""  />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+								</div>
+							</a>
+						</div>
+						<button><a href="#myModal" data-toggle="modal">Detaljerad Information</a></button>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="2" data-sort="Luminous night">
+						<div class="agileits-img">
+							<a href="images/g2.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis.">
+								<img src="images/g2.jpg" alt="" class="img-responsive" />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn2">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="City wonders">
+						<div class="agileits-img">
+							<a href="images/g3.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+								<img src="images/g3.jpg" alt="" class="img-responsive" />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn3">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="3" data-sort="Industrial site">
+						<div class="agileits-img">
+							<a href="images/g4.jpg" class="swipebox" title="Praesent non purus fermentum, eleifend velit.">
+								<img src="images/g4.jpg" alt="" class="img-responsive " />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn4">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="3" data-sort="In production">
+						<div class="agileits-img">
+							<a href="images/g5.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+								<img src="images/g5.jpg" alt="" class="img-responsive" />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn5">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="2" data-sort="Peaceful lake">
+						<div class="agileits-img">
+							<a href="images/g6.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis.">
+								<img src="images/g6.jpg" alt="" class="img-responsive" />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn6">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Peaceful lake">
+						<div class="agileits-img">
+							<a href="images/g7.jpg" class="swipebox" title="Eleifend velit non duis maximus tortor diam.">
+								<img src="images/g7.jpg" alt="" class="img-responsive" />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn7">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="2" data-sort="Peaceful lake">
+						<div class="agileits-img">
+							<a href="images/g3.jpg" class="swipebox" title="Praesent non purus fermentum, eleifend velit non.">
+								<img src="images/g3.jpg" alt="" class="img-responsive" />
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn8">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="3" data-sort="Peaceful lake">
+						<div class="agileits-img">
+							<a href="images/g1.jpg" class="swipebox" title="Ac lobortis justo rutrum quis.">
+								<img src="images/g1.jpg" alt="" class="img-responsive"/>
+								<div class="wthree-pcatn">
+									<h4>Nielsen Estate</h4>
+									<button class="modalBtn" id="modalBtn9">Se info</button>
+								</div>
+							</a>
+						</div>
+					</div>
+				   <div class="clearfix"> </div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //portfolio -->
+	<!-- testimonials -->
+	<div class="testimonials">
+		<div class="container">
+			<h3 class="w3title">Referenser</h3>
+			<section class="slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<div class="testimonials-grid agileinfo">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam sed do eiusmod.</p>
+								<h5>John Doe,<span> Tempor</span></h5>
+							</div>
+						</li>
+						<li>
+							<div class="testimonials-grid">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam sed do eiusmod.</p>
+								<h5>Elit semper,<span> Veniam</span></h5>
+							</div>
+						</li>
+						<li>
+							<div class="testimonials-grid">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam sed do eiusmod.</p>
+								<h5>Daniel Nyari,<span> Enim </span></h5>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- FlexSlider -->
+			<script defer src="js/jquery.flexslider.js"></script>
+			<script type="text/javascript">
+			$(window).load(function(){
+			  $('.flexslider').flexslider({
+				animation: "slide",
+				start: function(slider){
+				  $('body').removeClass('loading');
+				}
+			  });
+			});
+			</script>
+			<!-- End-slider-script -->
+		</div>
+	</div>
+	<!-- //testimonials -->
+	<!-- about -->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="col-md-6 about-left">
+				<h3 class="w3title">Om Oss</h3>
+				<h4>Blanditiis praesentium deleniti atque corrupti quos corrupti quos dolores</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit fermentum lobortis, eget placerat mauris sed lectus tellus. Sed porta magna vitae nisl vulputate lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in lobortis nulla.</p>
+				<a href="#myModal" class="wthree-btn w3btn2" data-toggle="modal">Ta Reda På Mer</a>
+			</div>
+			<div class="col-md-6 about-right">
+				<img src="images/H3-6.jpg" class="img-responsive" alt=" ">
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- contact -->
+	<div id="contact" class="testimonials contact">
+		<div class="container">
+			<h3 class="w3title">Kontakta Oss</h3>
+			<p class="wthree-ttext">Dolorem eum aliquid ex ea commodi vel illumqui consequatur
+				vel illum qui dolorem eum fugiat quo voluptas</p>
+			<div class="contact-w3ls-row">
+				<form action="#" method="post">
+					<input type="text" name="First Name" placeholder="Förnamn" required="">
+					<input class="email" name="Email" type="text" placeholder="Email" required="">
+					<textarea name="Message" placeholder="Meddelande" required=""></textarea>
+					<input type="submit" value="Skicka">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- address -->
+	<div class="w3-agileaddress">
+		<div class="container">
+			<div class="col-md-4 col-xs-4 address-grids">
+				<span class="fa fa-phone" aria-hidden="true"></span>
+				<p> +01 111 222 3333</p>
+			</div>
+			<div class="col-md-4 col-xs-4 address-grids">
+				<span class="fa fa-map-marker" aria-hidden="true"></span>
+				<p>1025 Calle del Toro, Spanien, <br> AL 10002, Alicante </p>
+			</div>
+			<div class="col-md-4 col-xs-4 address-grids">
+				<span class="fa fa-envelope" aria-hidden="true"></span>
+				<p><a href="mailto:info@example.com"> mail@example.com</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- //address -->
+	<!-- map -->
+	<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d782.3130675452688!2d-0.48616457079592273!3d38.34314279872874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6237b39fe085c7%3A0xc144287a52d18096!2sCarrer+Velarde%2C+03001+Alacant%2C+Alicante%2C+Spanien!5e0!3m2!1ssv!2sse!4v1518612225357" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	<!-- //map -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="social-icon">
+				<a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+				<a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
+				<a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a>
+				<a href="#" class="social-button skype"><i class="fa fa-skype"></i></a>
+			</div>
+			<p>© 2018 Nielsen Estate. All rights reserved | Design by PJ</p>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- modals -->
+<div id="modalDiv">
+	<div class="modal bnr-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body modal-spa">
+					<img src="images/bg2.jpg" class="img-responsive" alt=""/>
+					<h4>Blanditiis deleniti</h4>
+					<p>Aut aut reiciendis voluptatibus maiores alias consequatur aut At vero eos </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- //modals -->
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+	$(window).load(function(){
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		start: function(slider){
+		  $('body').removeClass('loading');
+		}
+	  });
+	});
+	</script>
+	<!-- End-slider-script -->
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- menu-js -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="js/menu.js"></script> <!-- Resource jQuery -->
+	<!-- //menu-js -->
+	<!-- Kick off Filterizr -->
+	<script src="js/jquery.filterizr.js"></script>
+	<script src="js/controls.js"></script>
+	<script type="text/javascript">
+		/*$(function() {
+			//Initialize filterizr with default options
+			$('.filtr-container').filterizr();
+		});*/
+	</script>
+	<!-- swipe box js -->
+	<script src="js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+	</script>
+	<!-- //swipe box js -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

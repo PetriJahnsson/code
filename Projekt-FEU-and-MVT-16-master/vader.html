@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nyhetssida</title>
+  <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+    <script type="text/jsx" src="assets/weather.jsx"></script>
+</head>
+<body>
+
+    <div id="newsSite">
+        <div id="header">
+        <p id="title">Nuntius</p>
+            <div id="menu">
+                
+            </div>
+        </div>
+
+        <div id="wrap-content">
+        <div id="weather-content" class="weather-content">
+            
+            <!--<div id="app-root">Utan React</div>-->
+            <div id="currentWeather"></div>
+            
+            
+    
+            
+            <div class="weatherList" id="1"><p class="weatherDate" id="date1"></p><br/><span id="day1"></span><br/><span id="temperature1" class="temperature"></span></div>
+            
+            <div class="weatherList" id="2"><p class="weatherDate" id="date2"></p><br/><span id="day2"></span><br/><span id="temperature2" class="temperature"></span></div>
+            
+            <div class="weatherList" id="3"><p class="weatherDate" id="date3"></p><br/><span id="day3"></span><br/><span id="temperature3" class="temperature"></span></div>
+            
+            <div class="weatherList" id="4"><p class="weatherDate" id="date4"></p><br/><span id="day4"></span><br/><span id="temperature4" class="temperature"></span></div>
+            
+            <div class="weatherList" id="5"><p class="weatherDate" id="date5"></p><br/><span id="day5"></span><br/><span id="temperature5" class="temperature"></span></div>
+            
+        </div>
+        </div>
+
+        <div id="footer">
+            <p id="footerText">Copyrights FEU16 & MVT16 || Powered by <a href="http://openweathermap.org">OpenWeatherMap</a></p>
+        </div>
+    </div>
+
+
+<script type="text/babel" src="assets/navigation.jsx"></script>
+<script type="text/jsx" src="assets/weather.jsx"></script>
+
+
+</body>
+</html>

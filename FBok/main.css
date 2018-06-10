@@ -1,0 +1,265 @@
+body, h1, h2, p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background-image:url('bg.jpg');
+	background-color: #444;
+	color: #333;
+	font-family: Helvetica, sans-serif;
+}
+
+
+/*.pause {
+	cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}*/
+
+#book {
+	background: url("book.png") no-repeat;
+	position: absolute;
+	width: 1042px;
+	height: 516px;
+	left: 50%;
+	top: 50%;
+	margin-left: -500px;
+	margin-top: -300px;
+}
+
+#pages section {
+	background: url("paper.png") no-repeat;
+	display: block;
+	width: 1000px;
+	height: 500px;
+	position: absolute;
+	left: 18px;
+	top: 9px;
+	overflow: hidden;
+}
+	#pages section>div {
+		display: block;
+		/*float: left;*/
+		width: 1000px;
+		height: 500px;
+		font-size: 12px;
+	}
+	
+	.bild {
+		position: absolute;
+		display: block;
+		width: 500px;
+		height: 500px;
+		margin-left: 450px;
+		padding: 60px;
+		line-height: 1.4em;
+		font-family: Garamond, Georgia, serif;
+		font-size: 20px;
+		text-align: center;
+		overflow: hidden;
+	}
+	.text {
+		position: absolute;
+		display: block;
+		width: 450px;
+		height: 500px;
+		margin-bottom: 10px;
+		margin-top: 150px;
+		padding: 35px;
+		line-height: 1.4em;
+		font-family: Garamond, Georgia, serif;
+		text-align: center;
+		font-size: 14px;
+		overflow: hidden;
+	}
+	.vtext {
+		position: absolute;
+		display: block;
+		width: 450px;
+		height: 500px;
+		margin-left: 475px;
+		margin-top: 130px;
+		padding: 35px;
+		line-height: 1.4em;
+		font-family: Garamond, Georgia, serif;
+		font-size: 20px;
+		text-align: center;
+		overflow: hidden;
+	}
+	#ovtext h1{
+		font-size: 28px;
+		font-style: bold;
+	}
+	.vtext h2{
+		font-size: 20px;
+		font-style: italic;
+	}
+	
+	.brotext {
+		position: absolute;
+		display: block;
+		width: 450px;
+		height: 500px;
+		margin-bottom: 10px;
+		padding: 14px 35px;
+		line-height: 1.4em;
+		font-family: Garamond, Georgia, serif;
+		margin-top: 12px;
+		text-align: left;
+		font-size: 12px;
+		overflow: hidden;
+    }
+    	.vbrotext {
+		position: absolute;
+		display: block;
+		width: 450px;
+		height: 500px;
+		margin-left: 500px;
+		padding: 14px 35px;
+		line-height: 1.4em;
+		font-family: Garamond, Georgia, serif;
+		font-size: 12px;
+		margin-top: 60px;
+		text-align: left;
+		overflow: hidden;
+	}
+	#vbrotext {
+		position: absolute;
+		display: block;
+		width: 500px;
+		height: 500px;
+		margin-left: 500px;
+		padding: 14px 35px;
+		line-height: 1.4em;
+		font-family: Garamond, Georgia, serif;
+		font-size: 12px;
+		margin-top: 12px;
+		text-align: left;
+		overflow: hidden;
+	}
+	.brotext img{
+		display: block;
+		width: 270px;
+		height: 270px;
+		padding: 14px;
+		padding-top: 6px;
+		float: left;
+	}
+
+    #protext {
+	    font-size: 18px;
+	    text-align: center;
+    }
+    .protext2 {
+	    font-size: 18px;
+	    text-align: center;
+	    padding: 14px;
+	} 
+	#protext3 {
+		font-size: 18px;
+		text-align: center;
+		padding-bottom: 14px;
+		margin-top: 12px;
+	}
+	#smbild {
+		margin-top: 45px;
+	}
+	#cent {
+		text-align: center;
+	}
+	.sidnr {
+		position: absolute;
+		font-size: 8px;
+	}    
+
+#pageflip-canvas {
+	position: absolute;
+	z-index: 100;
+}
+footer {
+	background-color: #303030;
+	position: fixed;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	/*margin-top: 600px;*/
+}
+footer p,a {
+	padding: 5px;
+	font-size: 10px;
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+	color: white;
+}
+
+#preloader {
+	background: #000;
+	position:fixed;
+	left:0px; 
+	top:0px; 
+	width:100%; 
+	height:100%; 
+	text-align:center;
+	color:#fff;
+	z-index: 200;
+}
+#preloader div {
+	width:400px;
+	margin:auto;
+	height: 3px;
+	text-align:center;
+	border: 4px solid #111;
+	overflow:hidden;
+}
+#preloader_image {
+	position: relative;
+	left:0px;
+	top:-10px;
+}
+#musik {
+	width: 150px;
+	height: 45px;
+	float: right;
+	margin: 0;
+}
+.fb-like {
+	float: left;
+	background: grey;
+	margin-top: 15px;
+	margin-left: 10px;
+	
+	-moz-border-radius: 15px;
+	border-radius: 15px;	
+}
+.lang {
+	float: left;
+	margin-top: 17px;
+}
+.preo {
+	float: left;
+	background: grey;
+	margin-left: 10px;
+	margin-top: 16px;
+	font-size: 10px; 
+	padding: 5px;
+	font-family: Helvetica, sans-serif;
+	
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.preo a{
+	color: #313843;
+	text-decoration: none;
+}
+.cop {
+	float: left;
+	margin-left: 150px;
+	margin-top: 7px;
+	padding: 5px;
+	font-size: 10px;
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+	color: white;
+}

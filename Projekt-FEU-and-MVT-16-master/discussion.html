@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="Swedish">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nyhetssida</title>
+  <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <link href="assets/style.css" rel="stylesheet">
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCUN2Oe6nSsTufAK7oSTYJezU140OlmO4A",
+    authDomain: "sjukt-trakigt-projekt.firebaseapp.com",
+    databaseURL: "https://sjukt-trakigt-projekt.firebaseio.com",
+    projectId: "sjukt-trakigt-projekt",
+    storageBucket: "sjukt-trakigt-projekt.appspot.com",
+    messagingSenderId: "294253466279"
+  };
+  firebase.initializeApp(config);
+  </script>
+</head>
+<body>
+
+    <div id="newsSite">
+        <div id="header">
+        <p id="title">Nuntius</p>
+            <div id="menu"></div>
+        </div>
+
+        <div id="wrap-content">
+        	<div class="content" id="discussion"></div>
+        </div>
+
+        <div id="footer">
+            <p id="footerText">Copyrights FEU16 & MVT16</p>
+        </div>
+    </div>
+
+<script type="text/babel" src="assets/navigation.jsx"></script>
+<script type="text/babel">
+ 
+const auth = firebase.auth();
+let getID = id => document.getElementById(id);
+
+class DiscussionApp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      messages:'', messageAmount:null, user:null,}
+    this.sendNewMessage = this.sendNewMessage.bind(this);
+    this.completeAuthentication = this.completeAuthentication.bind(this);}
+  componentDidMount() {
+    const root = firebase.database().ref();
+    firebase.database().ref('messages').on('value', snap => {
+      let list = snap.val();
+      console.log(list)
+      if(list != null) {
+        let msgs = list.map((object, key) => {
+          return(
+            <div className="message" key={key}>
+              <br/>
+              <span className="messageName">{object.name}</span>: <span className="messageText">{object.message}</span> 
+              <p className="messageTime">{object.time}</p>
+              <br/>
+            </div>
+          );})
+        this.setState({messages:msgs})
+        this.setState({messageAmount:list.length})}});}
+  completeAuthentication() {
+    console.log(name)
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(googleProvider)
+    .then(function(result) {
+      let newName = result.user.displayName;
+      console.log(newName)
+      this.setState({name:newName});
+      this.setState({loggedIn:true})}.bind(this))
+    .catch(function(error) {
+      console.error(error)});}
+  sendNewMessage(object) {
+    console.log(object)
+    firebase.database().ref('messages/' + this.state.messageAmount).set({name:this.state.name, message:object.message, time:object.time});}
+  render() {
+    return(
+      <div>
+        {this.state.messages}
+        {(this.state.loggedIn)
+          ? <InputForm newMessage={this.sendNewMessage}  />
+          : <AuthForm completeAuthentication={this.completeAuthentication} />}
+      </div>);}}
+
+class InputForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.constructMessage = this.constructMessage.bind(this);}
+  constructMessage(event) {
+    event.preventDefault();
+    // Get value
+    let inputMessage = event.target.querySelector('#inputMessage'); 
+    // Get Time
+    let date = new Date(); let timeString = date.toLocaleTimeString();
+    // Create message object
+    let newObject = {message:(inputMessage.value), time:timeString};
+    // Call list updater
+    this.props.newMessage(newObject);
+    // Clear input
+    inputMessage.value = '';}
+  render() {
+    return(
+      <form onSubmit={this.constructMessage} >
+        <h2>Add new</h2>
+        <input type="text" id="inputMessage" placeholder="Message" />
+        <input type="submit" />
+      </form>);}}
+
+class AuthForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleLoginEvent = this.handleLoginEvent.bind(this);}
+  handleLoginEvent(event) {
+    event.preventDefault();
+    this.props.completeAuthentication();}
+  render() {
+    return(
+      <div>
+        <h3>Log in to post:</h3>
+        <form onSubmit={this.handleLoginEvent}>
+          <button type="submit">Log in with Google</button>
+        </form>
+      </div>);}}
+
+
+ReactDOM.render(<DiscussionApp />, getID('discussion'));
+
+</script>
+</body>
+</html>
