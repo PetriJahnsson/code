@@ -1,0 +1,10 @@
+{
+  "firstName": "",
+  "lastName": "",
+  "personNumber": "",
+  "treatmentOptions": ["Kirurgi", "Strålbehandling", "Cytostatikabehandling"],
+  "treatmentSelection": "",
+  "diagnosOptions": ["PAD", "Cytologi", "Röntgen", "Klinisk Undersökning"],
+  "diagnosSelection": ["PAD"],
+  "generalConditionOptions": ["0", "1", "2", "3", "4", "5"]
+}
