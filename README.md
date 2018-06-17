@@ -15,6 +15,4 @@ adslide En referensslider till egensajt.se. Sidoprojekt för 3 år sedan. Html o
 
 canvas Enkel grafikapp. Skolarbete. HTML, Canvas och CSS.
 
-inl4, inl6 och ovn23 Skolarbeten i React, Redux, HTML och CSS.
-
 Formulär Arbetsprov för VGR.
